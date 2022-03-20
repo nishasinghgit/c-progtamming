@@ -894,10 +894,1147 @@ for (int i = 0; i<7; i++)
 return 0;
 }
 
+46.// W. A. P TO CHECK whether a number is even or odd
+
+#include<stdio.h>
+
+int main(){
+int a , b;
+printf("enter a number is\n");
+scanf("%d", &a);
+if(a%2==0)
+{
+    printf("%d your number is even \n",a);
+}
+
+else{
+printf("%d\nyour no is odd \n",a);
+}
+return 0;
+}
+
+47./ QUEST. W.A.P SHOW THE EFFECT OF MISMATCH OF DATA TYPES
+#include<stdio.h>
+
+int main(){
+int a;
+printf("enter the value of 'A':");
+scanf("%c",&a);
+printf("A=%c",a);
+return 0;
+}
+49.// / WAP TO READ AND PRINT THE INTEGER VALUE USING THE CHARACTER VARIABLE.
+#include<stdio.h>
+
+int main(){
+char a;
+printf("enter value of 'A'");
+scanf("%d",&a);
+printf("A=%d",a);
+return 0;
+}
+50.// wap to print logic 1 if input character is 
+#include<stdio.h>
+
+int main(){
+char x;
+int y;
+printf("\nenter the character");
+scanf("%c",&x);
+y=(x>=65&&x<=90?1:0);
+printf("y:%d",y);
+
+return 0;
+}
+51.// write a Program to take input of various datatypes in C
+
+#include<stdio.h>
+
+int main()
+{
+    
+
+    int num1, num2;  
+    float fraction;     
+    char character;
+
+    printf("Enter two numbers number\n");
+    
+    // Taking integer as input from user
+    scanf("%d%i", &num1, &num2);
+    printf("\n\nThe two numbers You have entered are %d and %i\n\n", num1, num2);
+
+    // Taking float or fraction as input from the user
+    printf("\n\nEnter a Decimal number\n");
+    scanf("%f", &fraction); 
+    printf("\n\nThe float or fraction that you have entered is %f", fraction);
+
+    // Taking Character as input from the user
+    printf("\n\nEnter a Character\n");
+    scanf("%c",&character);
+    printf("\n\nThe character that you have entered is %c", character);
+
+    
+    
+    return 0;
+}
+52.// write a program to check number is grater or less then 
+#include<stdio.h>
+
+int main()
+{
+    printf("NISHA\n\n");
+
+    int number;
+    printf("Please enter a number:\n");
+    scanf("%d",&number);
+    
+    if(number < 100)
+        printf("Number is less than 100!\n");
+    else if(number == 100)
+        printf("Number is 100!\n");
+    else
+        printf("Number is greater than 100!\n");
+
+    
+    
+    return 0;
+}
+53.// switch statement 
+#include<stdio.h>
+
+int main()
+{
+    printf("nisha\n");
+
+    // Local Variable Definition
+    char grade;
+    printf("Enter your grade:\n");
+    scanf("%c", &grade);
+
+    switch(grade)
+    {
+        case 'A':
+            printf("Excellent\n");
+            break;
+        case 'B':
+            printf("Keep it up!\n\n");
+            break;
+        case 'C':
+            printf("Well done\nbreak keyword takes execution to exit the switch case\n\n");
+            break;
+        case 'D':
+            printf("You passed\n");
+            break;
+        case 'F':
+            printf("Better luck next time\n");
+            break;
+        default:
+            printf("Invalid grade\n");
+    }
+    printf("Your grade is %c\n",grade);
+    
+    return 0;
+}
+54.// write a Program to check if input character is a vowel using Switch Case
+#include<stdio.h>
+
+int main()
+{
+    printf("NISHA SINGH\n");
+
+    char ch;
+    printf("Input a Character :  ");
+    scanf("%c", &ch);
+
+    switch(ch)
+    {
+        case 'a':
+        case 'A':
+        case 'e':
+        case 'E':
+        case 'i':
+        case 'I':
+        case 'o':
+        case 'O':
+        case 'u':
+        case 'U':
+            printf("\n\n%c is a vowel.\n\n", ch);
+            break;
+        default:
+            printf("%c is not a vowel.\n\n", ch);
+    }
+    
+    return 0;
+}
+55.// write a Program to reverse the case of input character
+#include<stdio.h>
+#include<ctype.h> // to use system defined function islower & toupper
+
+int main()
+{
+    printf("nisha singh\n");
+
+    char alphabet;
+    printf("Enter an alphabet : ");
+    putchar('\n');  // to move to next Line
+
+    alphabet=getchar();
+
+    printf("\n\nReverse case of %c is :  ",alphabet);
+
+    if(islower(alphabet))
+        putchar(toupper(alphabet));
+
+    else 
+        // must be an uppercase character
+        printf("%c",tolower(alphabet)) ;
+
+    
+    return 0;
+}
+56.// write a program to Swapping two Numbers using a Temporary Variable
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+    int x = 10, y = 15, temp;
+    temp = x;
+    x = y;
+    y = temp;
+    printf("x = %d and y = %d", x, y);
+    getch();
+}
+57.#include<math.h>
+#include<stdio.h>
+
+int checkprimenumber(int n);
+int checkarmstrongnumber(int n);
+int main(){
+    int n,flag;
+    printf("nisha\n");
+    printf("enter a positive integer:\n");
+    scanf("%d",&n);
+    flag=checkprimenumber(n);
+    if(flag==1)
+    printf("%dis prime number\n,n");
+    else
+    printf("%d  is not a prime number");
+    flag=checkarmstrongnumber(n);
+    if(flag==1)
+    printf("%d is armstrongnumber",n);
+    else
+    printf("%d, is not aarmstring number",n);
+    
+return 0;
+}
+int checkprimenumber(int n){
+    int i,flag=1, squareroot;
+    squareroot=sqrt(n);
+    for(i=2;i<=squareroot;++i){
+if(n%i==0){
+    flag=0;
+    break;
+
+}
+    }
+   
+    return flag=0;
+
+}
+int checkarmstrongnumber(int num){
+    int originalNum,remainder,n=0,flag;
+    double result=0.0;
+    for(originalNum=num;originalNum!=0;++n){
+    originalNum/= 10;
+
+}
+for(originalNum=num;originalNum!=0;originalNum /=10){
+    remainder = originalNum%10;
+    result+=pow(remainder,n);
+
+}
+if(round(result)==num)
+flag= 1;
+else flag =0;
+
+return flag;
+}
+58.// write a Program to print the Largest and Smallest using Global Declaration
+#include<stdio.h>
+int main(){
+int a,b;
+
+{
+ printf("NISHA SINGH\n");
+    printf("\n\nEnter the two values to find the greatest and smallest number: \n");
+    scanf("%d%d", &a, &b);
+
+    if(a == b)
+        printf("Both are equal\n");
+        
+    else if(a < b)
+    {
+        printf("\n\nThe largest number is %03d\n", b);
+        printf("\nThe smallest number is %03d\n", a);
+        printf("\nThe largest number is %03d\n", b);
+    }
+    else    //Only possibility remaining
+    {
+        printf("The largest number is %03d\n", a);
+        printf("The smallest number is %03d\n", b);
+    }
+    
+    return 0;
+}
+59.#include<stdio.h>
+int main()
+{
+    int c,num,r=0,t,i;
+    printf("enter the term");
+    scanf("%d",&num);
+    for(i=1;i<=num;i++)
+    {
+        printf("%d",r);
+        c=t+r;
+        r=t;
+        t=c;
+
+    }
+    return 0;
+
+}
+60.// ALFABET LADDER
+
+#include <stdio.h>
+int main()
+{
+    int i,j,lines;
+    char ch='A';
+    printf("Enter the no. of lines");
+    scanf("%d",&lines);
+    for(i=1;i<=lines;i++)
+    {
+        for(j=1;j<=i;j++)
+        {
+            printf("%c ",ch++);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+61.#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+void comparefiles(FILE *fp1,FILE *fp2)
+{
+    char ch1= getc(fp1);
+    char ch2= getc(fp2);
+    int error=0,pos=0,line=1;
+    while(ch1!=EOF&&ch2!=EOF)
+    {
+        pos++;
+        if(ch1=='\n'&&ch2=='\n')
+        {
+            line++;
+            pos=0;
+
+        }
+        if(ch1!=ch2)
+        {
+            error++;
+            printf("line number:%d\terror""podition:%d\n",line,pos);
+
+        }
+        ch1=getc(fp1);
+        ch2=getc(fp2);
+    }
+    printf("total error:%d\t",error);
+
+}
+int main(){
+    FILE *fp1=fopen("file.txt","r");
+    FILE*fp2=fopen("file2.txt","r");
+    if(fp1==NULL||fp2==NULL)
+    {
+        printf("error:files not open");
+        fclose(fp1);
+        fclose(fp2);
+        return 0;
+    }
+
+return 0;
+}
+62.#include<stdio.h>
+#include<string.h>
+int main(){
+char str[20];
+int i,len,temp=0;
+int flag=0;
+printf("nisha\n");
+printf("enter the string");
+scanf("%s",str);
+len=strlen(str);
+for(i=0;i<len;i++){
+    if(str[i]!=str[len-i-1]){
+        temp=1;
+        break;
+
+    }
+}
+if(temp==0){
+    printf("string is a palindrome");
+
+}
+else{
+    printf("string is not palindrome")
+}
+return 0;
+}
+63.// WRITE A PROGRAM TO PRIMT ARMSTRONG NUMBER
+#include<stdio.h>  
+ int main()    
+{    
+int n,r,sum=0,temp; 
+
+printf("NISHA SINGH\n");
+printf("enter the number=");    
+scanf("%d",&n);    
+temp=n;    
+while(n>0)    
+{    
+r=n%10;    
+sum=sum+(r*r*r);    
+n=n/10;    
+}    
+if(temp==sum)    
+printf("armstrong  number ");    
+else    
+printf("not armstrong number");    
+return 0;  
+}
+64.#include<stdio.h>
+
+int main(){
+FILE *f1,*f2,*f3;
+int number,i;
+printf("contents of data file\n\n");
+f1=fopen("DATA","w");
+for(i=1;i<=10;i++)
+{
+    scanf("%d",&number);
+    if(number==-1)break;
+    putw(number,f1);
+}
+fclose(f1);
+f1=fopen("DATA","r");
+f2=fopen("odd","w");
+f3=fopen("even","w");
+while((number=getw(f1))!=EOF)
+{
+    if(number%2==0)
+    putw(number,f3);
+    else
+    putw(number,f2);
+
+}
+fclose(f1);
+fclose(f2);
+fclose(f3);
+f2 = fopen("ODD","r");
+f3 = fopen("even","r");
+printf("contents of odd file");
+while((number=getw(f2))!= EOF)
+printf("%4d",number);
+printf("contents of evenfile");
+while((number=getw(f3))!= EOF)
+printf("%4d",number);
+fclose(f2);
+fclose(f3);
+}
 
 
+65.//  ALFAPATTERN
+ #include <stdio.h>
+int main()
+{
+    int i,j,lines;
+    char ch='A';
+    printf("siddhant\n");
+    printf("Enter the no. of lines");
+    scanf("%d",&lines);
+    for(i=1;i<=lines;i++)
+    {
+        for(j=1;j<=i;j++)
+        {
+            
+            printf("%c ",ch++);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+66.// 2D ARRAY ROW
+#include <stdio.h>
+int main() 
+{
+  int r, c, a[100][100], b[100][100], sum[100][100], i, j;
+  printf("siddhant\n");
+  printf("Enter the number of rows: ");
+  scanf("%d", &r);
+  printf("Enter the number of columns: ");
+  scanf("%d", &c);
+  printf("\nEnter elements of 1st Matrix:\n");
+  for (i = 0; i < r; ++i)
+    for (j = 0; j < c; ++j) {
+      printf("Enter element a%d%d: ", i + 1, j + 1);
+      scanf("%d", &a[i][j]);
+    }
+  printf("Enter elements of 2nd Matrix:\n");
+  for (i = 0; i < r; ++i)
+    for (j = 0; j < c; ++j) {
+      printf("Enter element b%d%d: ", i + 1, j + 1);
+      scanf("%d", &b[i][j]);
+    }
+  for (i = 0; i < r; ++i)
+    for (j = 0; j < c; ++j) 
+    {
+      sum[i][j] = a[i][j] + b[i][j];
+    }
 
+  printf("\nSum of two Matrices: \n");
+  for (i = 0; i < r; ++i)
+    for (j = 0; j < c; ++j) {
+      printf("%d   ", sum[i][j]);
+      if (j == c - 1) {
+        printf("\n\n");
+      }
+    }
+  return 0;
+}
+67.// ARRAY COLUMN
+#include<stdio.h>
+#include<stdlib.h>
 
+void main()
+{
+    int x[3][3]={1,2,3,4,5,6,7,8,9};
+    int c,r;
+    printf("siddhant\n");
+    printf("print address");
+    printf("\n  \t  col-0 \tc0l-1 \t col-2");
+    printf("\n row 0\t");
+    for(r=0;r<3;r++)
+    {
+        for(c=0;c<3;c++)
+         printf("%d [%u]",x[r][c],&x[r][c]);
+         printf("\n row %d\t",r+1);
+    }
+printf("\r");
+}
+68.// w.a.p.to Print names of all Files present in a Directory
+#include<stdio.h>
+#include<dirent.h>
+
+int main(void)
+{
+    DIR *d;
+    struct dirent *dir;
+    d = opendir(".");
+    if (d)
+    {
+        while ((dir = readdir(d)) != NULL)
+        {
+            printf("%s\n", dir->d_name);
+        }
+        closedir(d);
+    }
+    return(0);
+}
+69.// write a program to find the Size of any File
+
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+    FILE *fp;
+    char ch;
+    int size = 0;
+
+    fp = fopen("MyFile.txt", "r");
+    if (fp == NULL)
+    {
+        printf("\nFile unable to open...");
+    }
+    else
+    {
+        printf("\nFile opened...");
+    }
+    fseek(fp, 0, 2);    /* File pointer at the end of file */
+    size = ftell(fp);   /* Take a position of file pointer in size variable */
+    printf("The size of given file is: %d\n", size);
+    fclose(fp);
+}
+70.// C Program to create a File & write Data in it
+
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+    FILE *fptr;
+    char name[20];
+    int age;
+    float salary;
+
+    /* open for writing */
+    fptr = fopen("emp.txt", "w");
+
+    if (fptr == NULL)
+    {
+        printf("File does not exist.\n");
+        return;
+    }
+    printf("Enter the name:\n");
+    scanf("%s", name);
+    fprintf(fptr, "Name  = %s\n", name);
+
+    printf("Enter the age:\n");
+    scanf("%d", &age);
+    fprintf(fptr, "Age  = %d\n", age);
+
+    printf("Enter the salary:\n");
+    scanf("%f", &salary);
+    fprintf(fptr, "Salary  = %.2f\n", salary);
+
+    fclose(fptr);
+}
+71.// w.a.p.Accessing array elements(Traversing array) by incrementing a Pointer
+#include <stdio.h>
+
+const int MAX = 3;  // Global declaration
+int main()
+{
+	printf("nisha\n");
+	int var[] = {100, 200, 300};
+    int i, *ptr;
+
+    
+    ptr = var;
+
+    for(i = 0; i < MAX; i++)
+    {
+        printf("\n\n\nAddress of var[%d] = %x ", i, ptr);
+        printf("\nValue of var[%d] = %d ", i, *ptr);
+
+               ptr++;
+    }
+	
+    return 0;
+}
+72// w.a.p.Accessing array elements(Traversing array) by incrementing a Pointer
+#include <stdio.h>
+
+const int MAX = 3;  // Global declaration
+int main()
+{
+	printf("nisha\n");
+	int var[] = {100, 200, 300};
+    int i, *ptr;
+
+    
+    ptr = var;
+
+    for(i = 0; i < MAX; i++)
+    {
+        printf("\n\n\nAddress of var[%d] = %x ", i, ptr);
+        printf("\nValue of var[%d] = %d ", i, *ptr);
+
+               ptr++;
+    }
+	
+    return 0;
+}
+73.// write a program to check whether a Number is a Palindrome
+
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+    int a, b, c, s = 0;
+    clrscr();
+    printf("Enter a number:\t");
+    scanf("%d", &a);
+    c = a;
+
+   // the number is reversed inside the while loop.
+   while(a > 0)
+   {
+      b = a%10;
+      s = (s*10)+b;
+      a = a/10;
+   }
+
+   // here the reversed number is compared with the given number.
+   if(s == c)
+   {
+      printf("The number %d is a palindrome", c);
+   }
+   else
+   {
+      printf("The number %d is not a palindrome", c);
+   }
+  getch();
+}
+74.// write a Program to print reverse a String
+#include <stdio.h>
+int main()
+{
+  char str[1000], rev[1000];
+  int i, j, count = 0;
+  scanf("%s", str);
+  printf("\nString Before Reverse: %s", str);
+  //finding the length of the string
+  while (str[count] != '\0')
+  {
+    count++;
+  }
+  j = count - 1;
+
+  //reversing the string by swapping
+  for (i = 0; i < count; i++)
+  {
+    rev[i] = str[j];
+    j--;
+  }
+
+  printf("\nString After Reverse: %s", rev);
+}
+75.// write a program to print Reverse a String by using the new character array
+#include <stdio.h>
+int main()
+{
+  char str[1000], rev[1000];
+  int i, j, count = 0;
+  scanf("%s", str);
+  printf("\nString Before Reverse: %s", str);
+  //finding the length of the string
+  while (str[count] != '\0')
+  {
+    count++;
+  }
+  j = count - 1;
+
+  //reversing the string by swapping
+  for (i = 0; i < count; i++)
+  {
+    rev[i] = str[j];
+    j--;
+  }
+
+  printf("\nString After Reverse: %s", rev);
+}
+76// w.a.p.to Reverse a String by swapping the characters of the string
+#include <stdio.h>
+#include <string.h>
+void reverseStr(char str[])
+{
+  int n = strlen(str);
+
+  for (int i = 0; i < n / 2; i++)
+  {
+    char ch = str[i];
+    str[i] = str[n - i - 1];
+    str[n - i - 1] = ch;
+  }
+}
+
+int main()
+{
+  char str[1000];
+  scanf("%s", str);
+  printf("\nString Before Reverse: %s", str);
+  reverseStr(str);
+  printf("\nString After Reverse: %s", str);
+  return 0;
+}
+77.// w.a.p.to Declaring Structure variables separately
+#include<stdio.h>
+
+int main(){
+struct Student
+{
+    char name[25];
+    int age;
+    char branch[10];
+    //F for female and M for male
+    char gender;
+};
+
+struct Student S1, S2;      //declaring variables of struct Student
+return 0;
+}
+78// w.a.P TO PRINT a structure in C using typedef keyword.
+#include<stdio.h>
+#include<string.h>
+ 
+typedef struct employee
+{
+    char name[50];
+    int salary;
+}emp;
+ 
+void main( )
+{
+    emp e1;
+    printf("\nEnter Employee record:\n");
+    printf("\nEmployee name:\t");
+    scanf("%s", e1.name);
+    printf("\nEnter Employee salary: \t");
+    scanf("%d", &e1.salary);
+    printf("\nstudent name is %s", e1.name);
+    printf("\nroll is %d", e1.salary);
+}
+79.// WRITE A PROGRAM TO PRINT Using the pointer or Dereferencing of Pointer
+#include <stdio.h>
+
+int main()
+{
+    int a;  
+    a = 10;
+    int *p = &a;     // declaring and initializing the pointer
+
+    //prints the value of 'a'
+    printf("%d\n", *p);  
+    printf("%d\n", *&a);  
+    //prints the address of 'a'
+    printf("%u\n", &a);    
+    printf("%u\n", p);     
+    
+    printf("%u\n", &p);    //prints address of 'p'
+    
+    return 0;
+}
+80// W.A.P.TO.Simple program to represent Pointer to a Pointer
+#include <stdio.h>
+
+int main() {
+
+    int  a = 10;
+    int  *p1;       //this can store the address of variable a
+    int  **p2; 
+    /*
+        this can store the address of pointer variable p1 only. 
+        It cannot store the address of variable 'a' 
+    */
+
+    p1 = &a;
+    p2 = &p1;
+
+    printf("Address of a = %u\n", &a);
+    printf("Address of p1 = %u\n", &p1);
+    printf("Address of p2 = %u\n\n", &p2);
+
+    // below print statement will give the address of 'a'
+    printf("Value at the address stored by p2 = %u\n", *p2);
+    
+    printf("Value at the address stored by p1 = %d\n\n", *p1);
+
+    printf("Value of **p2 = %d\n", **p2); //read this *(*p2)
+
+    /*
+        This is not allowed, it will give a compile time error-
+        p2 = &a;
+        printf("%u", p2);
+    */
+    return 0;
+}
+81// WRITE A PROGRAM TO PRINT A Pointer to Array
+#include<stdio.h>
+
+void main()
+{
+   int a[3] = {1, 2, 3};
+   int *p = a;    
+   for (int i = 0; i < 3; i++)
+   {
+      printf("%d", *p);
+      p++;
+   }
+  return 0;
+}
+  82.// WRITE A PROGRAM TI PRINT Swapping two numbers using Pointer
+#include <stdio.h>
+
+void swap(int *a, int *b);
+
+int main()
+{
+    int m = 10, n = 20;
+    printf("m = %d\n", m);
+    printf("n = %d\n\n", n);
+
+    swap(&m, &n);    //passing address of m and n to the swap function
+    printf("After Swapping:\n\n");
+    printf("m = %d\n", m);
+    printf("n = %d", n);
+    return 0;
+}
+
+/*
+    pointer 'a' and 'b' holds and 
+    points to the address of 'm' and 'n'
+*/
+void swap(int *a, int *b) 
+{
+    int temp;
+    temp = *a;
+    *a = *b;
+    *b = temp;
+}
+83// WIRTE A PROGRAM TO PRINT Functions returning Pointer variables
+#include <stdio.h>
+
+int* larger(int*, int*);
+
+void main()
+{
+    int a = 15;
+    int b = 92;
+    int *p;
+    p = larger(&a, &b);
+    printf("%d is larger",*p);
+}
+
+int* larger(int *x, int *y)
+{
+    if(*x > *y)
+        return x;
+    else
+        return y;
+}
+84.// WRITE A PROGRAM TO PRINT Pointer to Function
+
+#include <stdio.h>
+
+int sum(int x, int y)
+{
+    return x+y;
+}
+
+int main( )
+{
+    int (*fp)(int, int);
+    fp = sum;
+    int s = fp(10, 15);
+    printf("Sum is %d", s);
+
+    return 0;
+}
+86.// WRITE A Program TO PRINT  pointer arithmetic(32-bit machine)
+#include <stdio.h>
+
+int main()
+{
+    int m = 5, n = 10, o = 0;
+
+    int *p1;
+    int *p2;
+    int *p3;
+
+    p1 = &m;    //printing the address of m
+    p2 = &n;    //printing the address of n
+
+    printf("p1 = %d\n", p1);
+    printf("p2 = %d\n", p2);
+
+    o = *p1+*p2;
+    printf("*p1+*p2 = %d\n", o);//point 1
+
+    p3 = p1-p2;
+    printf("p1 - p2 = %d\n", p3); //point 2
+
+    p1++;
+    printf("p1++ = %d\n", p1); //point 3
+
+    p2--;
+    printf("p2-- = %d\n", p2); //point 4
+
+    //Below line will give ERROR
+    printf("p1+p2 = %d\n", p1+p2); //point 5
+
+    return 0;
+}
+87.#include<stdio.h>
+
+void giveMeArray(int a);
+
+int main()
+{
+    int myArray[] = { 2, 3, 4 };
+    giveMeArray(myArray[2]);        //Passing array element myArray[2] only.
+    return 0;
+}
+
+void giveMeArray(int a)
+{
+    printf("%d", a);
+}
+88.// W.A.P TO PRINT Passing a Multi-dimensional array to a function
+#include<stdio.h>
+
+void displayArray(int arr[3][3]);
+
+int main()
+{
+    int arr[3][3], i, j;
+    printf("Please enter 9 numbers for the array: \n");
+    for (i = 0; i < 3; ++i)
+    {
+        for (j = 0; j < 3; ++j)
+        {    
+            scanf("%d", &arr[i][j]);
+        }
+    }
+    // passing the array as argument
+    displayArray(arr);
+    return 0;
+}
+
+void displayArray(int arr[3][3])
+{
+    int i, j;
+    printf("The complete array is: \n");
+    for (i = 0; i < 3; ++i)
+    {
+        // getting cursor to new line
+        printf("\n");
+        for (j = 0; j < 3; ++j)
+        {       
+            // \t is used to provide tab space
+            printf("%d\t", arr[i][j]);
+        }
+    }
+}
+89.//  W.A P TO PRINT Passing a single array element to a function
+#include<stdio.h>
+
+void giveMeArray(int a);
+
+int main()
+{
+    int myArray[] = { 2, 3, 4 };
+    giveMeArray(myArray[2]);        //Passing array element myArray[2] only.
+    return 0;
+}
+
+void giveMeArray(int a)
+{
+    printf("%d", a);
+}
+90.#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int i, n;
+    int *element;
+
+    printf("Enter total number of elements: ");
+    scanf("%d", &n);
+
+    /*
+        returns a void pointer(which is type-casted to int*)
+        pointing to the first block of the allocated space
+    */
+    element = (int*) calloc(n,sizeof(int)); 
+    
+    /*
+        If it fails to allocate enough space as specified, 
+        it returns a NULL pointer.
+    */
+    if(element == NULL) 
+    {
+        printf("Error.Not enough space available");
+        exit(0);
+    }
+
+    for(i = 0; i < n; i++)
+    {
+        /*
+            storing elements from the user 
+            in the allocated space
+        */
+       scanf("%d", element+i); 
+    }
+    for(i = 1; i < n; i++)
+    {
+       if(*element > *(element+i))
+       {
+            *element = *(element+i);
+        }
+    }
+
+    printf("Smallest element is %d", *element);
+
+    return 0;
+}
+93.// 
+#include<stdio.h>
+
+int a,b;
+int main()
+{
+    printf("nisha \n\n");
+    printf("\n\nEnter the two values to find the greatest and smallest number: \n");
+    scanf("%d%d", &a, &b);
+
+    if(a == b)
+        printf("Both are equal\n");
+        
+    else if(a < b)
+    {
+        printf("\n\nThe largest number is %03d\n", b);
+        printf("\nThe smallest number is %03d\n", a);
+        printf("\nThe largest number is %03d\n", b);
+    }
+    else    //Only possibility remaining
+    {
+        printf("The largest number is %03d\n", a);
+        printf("The smallest number is %03d\n", b);
+    }
+    
+    return 0;
+}
+94,// WRITE A PROGRAM TO PRINT Reverse a String by using the new character array
+#include <stdio.h>
+int main()
+{
+  char str[1000], rev[1000];
+  int i, j, count = 0;
+  scanf("%s", str);
+  printf("\nString Before Reverse: %s", str);
+  //finding the length of the string
+  while (str[count] != '\0')
+  {
+    count++;
+  }
+  j = count - 1;
+
+  //reversing the string by swapping
+  for (i = 0; i < count; i++)
+  {
+    rev[i] = str[j];
+    j--;
+  }
+
+  printf("\nString After Reverse: %s", rev);
+  return 0;
+  
+}
 
 
 
